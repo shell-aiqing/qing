@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪念页面</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #videoContainer {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            padding-top: 45vw;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+            display: none;
+        }
+
+        #lifeVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgm" autoplay loop>
+        <source src="bgMusic.mp3" type="audio/mp3">
+    </audio>
+    <div id="introContainer">
+        <video id="introVideo" src="intro.mp4" autoplay muted></video>
+    </div>
+
+    <div id="mainContainer" style="display: none;">
+        <div class="background">
+            <img src="background.jpg" alt="背景">
+            <video id="candleVideo" class="overlayVideo" src="candle.webm" autoplay loop muted></video>
+        </div>
+
+        <div class="buttonPanel">
+            <img id="videoBtn" src="videoBtn.png" alt="视频">
+            <img id="flowerBtn" src="flowerBtn.png" alt="鲜花">
+            <img id="moneyBtn" src="moneyBtn.png" alt="香火">
+        </div>
+
+        <div id="contentDisplay">
+            <div id="flowerContainer"></div>
+            <div id="incenseContainer"></div>
+        </div>
+
+        <div id="videoContainer">
+            <video id="lifeVideo" autoplay loop muted>
+                <source src="lifeVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="closeSection">
+            <button id="closePage">X</button>
+            <p id="closeTip" style="display: none;">无法关闭？请手动关闭浏览器标签。</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

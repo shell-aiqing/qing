@@ -1,0 +1,126 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+}
+
+#introContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+#introVideo {
+  width: 100%;
+  height: auto;
+}
+
+#mainContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: auto;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.buttonPanel {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttonPanel img {
+  width: 60px;
+  cursor: pointer;
+}
+
+#contentDisplay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  min-height: 200px;
+  background: transparent;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#flowerContainer {
+  position: absolute;
+  top: 60%; /* 将 flower.png 下移至页面 60% 的位置 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* 保持宽度 */
+  height: 150px; /* 保持高度 */
+}
+
+#incenseContainer {
+  width: 500px; /* 增大 incense.webm 的宽度 */
+  height: 300px; /* 增大 incense.webm 的高度 */
+}
+
+#flowerContainer img, #incenseContainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.transparentVideo {
+  mix-blend-mode: screen;
+  background: transparent;
+}
+
+#closeSection {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 6;
+}
+
+#closePage {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#closeTip {
+  color: #fff;
+  font-size: 12px;
+  margin-top: 5px;
+}
